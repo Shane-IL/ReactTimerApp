@@ -1,1 +1,1 @@
-React Boilerplate 2.0
+A Timer App for React, from tutroial for learning react
