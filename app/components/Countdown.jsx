@@ -1,9 +1,9 @@
-var React = require('react');
+import React from 'react';
 
-var Countdown = React.createClass({
-  render: function () {
-    return <p>Countdown.jsx</p>;
-  }
-});
-
-module.exports = Countdown;
+export default class WeatherForm extends React.Component{
+    render(){
+        return (
+            <p>Countdown.jsx</p>
+        )
+    }
+};
