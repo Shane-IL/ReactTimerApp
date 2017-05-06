@@ -1,9 +1,9 @@
-import React from 'react';
+var React = require('react');
 
-const Countdown = (props) =>(
-    <div>
-        Countdown.jsx
-    </div>
-);
+var Countdown = React.createClass({
+  render: function () {
+    return <p>Countdown.jsx</p>;
+  }
+});
 
-export {Countdown as default};
+module.exports = Countdown;

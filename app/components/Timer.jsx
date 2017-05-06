@@ -1,9 +1,9 @@
-import React from 'react';
+var React = require('react');
 
-const Timer = (props) =>(
-    <div>
-        Timer.jsx
-    </div>
-);
+var Timer = React.createClass({
+  render: function () {
+    return <p>Timer.jsx</p>;
+  }
+});
 
-export {Timer as default};
+module.exports = Timer;

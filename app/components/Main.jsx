@@ -1,18 +1,18 @@
-import React from 'react';
-import Nav from 'Nav';
+var React = require('react');
+var Navigation = require('Navigation');
 
-const Main = (props) => {
-    return(
+var Main = (props) => {
+  return (
+    <div>
+      <div>
         <div>
-            <div>
-                <div>
-                    <Nav/>
-                    <p>Main.jsx</p>
-                    {props.children}
-                </div>
-            </div>
+          <Navigation/>
+          <p>Main.jsx Rendered</p>
+          {props.children}
         </div>
-    );
-};
+      </div>
+    </div>
+  );
+}
 
-export {Main as default};
+module.exports = Main;
