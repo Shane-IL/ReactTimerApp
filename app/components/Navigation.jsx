@@ -22,7 +22,7 @@ export default class Navigation extends React.Component{
           <div className="top-bar-right">
             <ul className="menu">
               <li className="menu-text">
-                Created by <a href="http://www.mead.io" target="_blank">Andrew Mead</a>
+                Baked by <a href="https://github.com/Shane-IL/" target="_blank">Shane</a>
               </li>
             </ul>
           </div>
