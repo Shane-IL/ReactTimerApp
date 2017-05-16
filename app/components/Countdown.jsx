@@ -3,7 +3,7 @@ import Clock from 'Clock';
 import CountdownForm from 'CountdownForm';
 import Controls from 'Controls';
 
-export default class WeatherForm extends React.Component{
+export default class Countdown extends React.Component{
     constructor(props) {
         super(props);
         this.state = {
