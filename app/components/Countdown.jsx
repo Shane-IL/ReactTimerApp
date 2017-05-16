@@ -23,17 +23,22 @@ export default class WeatherForm extends React.Component{
                     this.setState({count: 0});
                 case 'paused':
                     clearInterval(this.timer);
-                    this.timer = undefined;
+                    this.timer = null;
                     break;
             }
         }
     }
 
-    handleSetCountdown = (seconds) => {
+    handleSetCountdown(seconds) {
         this.setState({
             count: seconds,
             countdownStatus: 'started'
         });
+    }
+
+    componentWillUnmount(){
+        clearInterval(this.timer);
+        this.timer = null;
     }
 
     startTimer(){
@@ -42,6 +47,11 @@ export default class WeatherForm extends React.Component{
             this.setState({
                 count: newCount >= 0 ? newCount : 0
             });
+
+            if(newCount === 0){
+                this.setState({countdownStatus: 'stopped'})
+            };
+
         }, 1000);
     }
 
@@ -56,7 +66,7 @@ export default class WeatherForm extends React.Component{
                 return <Controls countdownStatus={countdownStatus} onStatusChange={(e) => this.handleStatusChange(e)}/>;
             }
             else {
-                return <CountdownForm onSetCountDown={this.handleSetCountdown}/>;
+                return <CountdownForm onSetCountDown={(e) => this.handleSetCountdown(e)}/>;
             }
         };
 
